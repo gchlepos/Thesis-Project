@@ -35,7 +35,7 @@ def index(request):
 @login_required
 def profile(request):
 
-    keys= ['apikey','e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['apikey','1']
     create_config(keys)
 
     my_user= request.user
@@ -105,7 +105,7 @@ def set_user(request):
 @login_required
 def main_page(request):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user= request.user
@@ -128,7 +128,7 @@ def main_page(request):
 @login_required
 def author_creator(request):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user= request.user
@@ -184,7 +184,7 @@ def author_creator(request):
 @login_required
 def docs_updator(request):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user= request.user
@@ -245,7 +245,7 @@ def docs_updator(request):
 @login_required
 def publications_creator_presenter(request):
 
-    keys= ['apikey','e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['apikey','1']
     create_config(keys)
 
     # print('your key: ' + config['Authentication']['APIKey'])
@@ -384,7 +384,7 @@ def publication_reviver(request, publication_name):
 @login_required
 def statistics_all_years_creator(request):
 
-    keys= ['apikey','e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['apikey','1']
     create_config(keys)
 
     my_user = request.user
@@ -560,7 +560,7 @@ def edited_text_download_all_years(request, citation_count, citedby_count):
 @login_required
 def report_last_year_creator(request):
 
-    keys= ['apikey','e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['apikey','1']
     create_config(keys)
 
     my_user= request.user
@@ -755,7 +755,7 @@ def count_created_documents(request):
 @login_required
 def find_fake_citedby(request):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user = request.user
@@ -801,7 +801,7 @@ def delete_doubles(request):
 @login_required
 def find_lastyear_citations(request):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user= request.user
@@ -853,7 +853,7 @@ def find_lastyear_citations(request):
     return real_citations
 
 def lastyear_citation_maker(request):
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user = request.user
@@ -891,7 +891,7 @@ def lastyear_citation_maker(request):
 
 def allyears_citation_maker(request):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user = request.user
@@ -921,7 +921,7 @@ def allyears_citation_maker(request):
 
 def admin_fullreport_creator(query):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     if User.objects.filter(last_name=query).exists() == False:
@@ -937,7 +937,7 @@ def admin_fullreport_creator(query):
 
 def admin_lastyearreport_creator(query):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     if User.objects.filter(last_name=query).exists() == False:
@@ -959,7 +959,7 @@ def admin_lastyearreport_creator(query):
 
 def admin_fiveyearreport_creator(query):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     if User.objects.filter(last_name=query).exists() == False:
@@ -1057,7 +1057,7 @@ def admin_querysearch(request):
     return render(request, 'accounts/admin_query.html')
 
 def fiveyears_citation_maker(request):
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user = request.user
@@ -1093,7 +1093,7 @@ def fiveyears_citation_maker(request):
 @login_required
 def fiveyears_report_creator(request):
 
-    keys= ['e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['1']
     create_config(keys)
 
     my_user= request.user
@@ -1223,7 +1223,7 @@ def text_download_five_years(request):
 'accounts/fiveyears_report.html'
 def admin_see_hua(request):
 
-    keys= ['apikey','e8d3692d46d3acb3150908ec6151e31a']
+    keys= ['apikey','1']
     create_config(keys)
 
     hua= AffiliationRetrieval('60012296', refresh=True)
